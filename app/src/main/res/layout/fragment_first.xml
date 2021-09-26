@@ -27,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/random_button_text"
+        android:background="@color/buttonBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_first" />
@@ -36,15 +37,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/toast_button_text"
+        android:background="@color/buttonBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/count_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/count_button_text"
+        android:background="@color/buttonBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/random_button"
         app:layout_constraintStart_toEndOf="@+id/toast_button"
