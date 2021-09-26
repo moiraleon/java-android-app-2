@@ -14,6 +14,13 @@ import com.example.mysecondapplication.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
 
+    private void countMe(View view) {
+        String countString = showCountTextView.getText().toString();
+        Integer count = Integer.parseInt(countString);
+        count++;
+        showCountTextView.setText(count.toString());
+    }
+
     private FragmentFirstBinding binding;
 
     @Override
@@ -42,6 +49,13 @@ public class FirstFragment extends Fragment {
             public void onClick(View view) {
                 Toast myToast = Toast.makeText(getActivity(), "Hello toast!", Toast.LENGTH_SHORT);
                 myToast.show();
+            }
+        });
+
+        view.findViewById(R.id.count_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                countMe(view);
             }
         });
 
