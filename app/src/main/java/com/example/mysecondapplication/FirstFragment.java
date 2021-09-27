@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,8 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.example.mysecondapplication.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
+
+    TextView showCountTextView;
 
     private void countMe(View view) {
         String countString = showCountTextView.getText().toString();
@@ -29,8 +32,11 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        View fragmentFirstLayout = inflater.inflate(R.layout.fragment_first, container, false);
+        showCountTextView = fragmentFirstLayout.findViewById(R.id.textview_first);
+//        binding = FragmentFirstBinding.inflate(inflater, container, false);
+//        return binding.getRoot();
+        return fragmentFirstLayout;
 
     }
 
